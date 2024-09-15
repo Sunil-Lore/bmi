@@ -16,21 +16,22 @@
         <nav>
             <a href="https://www.getcss.org">Home</a>
         </nav>
-        <main class="fx-perfect-center p-t-20-pr">
+        <main class="fx-perfect-center p-y-10-pr">
             <div class="bmibox">
-                <div class="row fx-row">
-                    <div class="p-10-px">
-                        <p><b>Check your BMI:</b></p>
-                        <form action="#" class="m-10-px">
-                            <label for="height">Height (cm):</label><br>
-                            <input type="text" id="height" name="height" size="10"><br>
+                <div class="row fx-wrap">
+                    <div class="col-md-6 p-2-px">
+                        <p class="txt-center"><b>Check your BMI:</b></p>
+                        <br />
+                        <form action="#" class="m-2-px txt-center">
+                            <label for="height">Height (cm):</label><br />
+                            <input type="text" id="height" name="height" size="10"><br /><br />
                             <label for="weight">Weight (kg):</label><br>
-                            <input type="text" id="weight" name="weight" size="10"><br><br>
+                            <input type="text" id="weight" name="weight" size="10"><br /><br />
                             <input type="submit" value="Calculate">
                             <input type="reset" value="Reset">
                           </form>
                     </div> 
-                    <div class="resultbox">
+                    <div class="col-md-6 resultbox">
                         <ul>
                             <li id="obesity">Obesity</li>
                             <li id="overweight">Overweight</li>
@@ -43,6 +44,11 @@
                 
             </div>
         </main>
+        <footer>
+            <p class="txt-center">
+                <a href="https://sunil-lore.github.io/">&copy;sunil-lore.github.io</a>
+            </p>
+        </footer>
     </div>
 </body>
 </html>
