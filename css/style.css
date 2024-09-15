@@ -31,3 +31,37 @@
         background-color: var(--light-color);
         color: var(--secondary-color);
     }
+    .bmibox {
+        border: 2px solid var(--secondary-color);
+        border-radius: 10px;
+        background-color: var(--light-color);
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+    }
+    li {
+        padding:10px;
+        display: block;
+        opacity:0.1;
+    }
+    li#underweight {
+        background-color: var(--underweight-color);
+    }
+    li#overweight {
+        background-color: var(--overweight-color);
+    }
+    li#optimum {
+        background-color: var(--optimum-color);
+    }
+    li#obesity {
+        background-color: var(--obesity-color);
+    }
+    .resultbox {
+        border: none;
+        border-radius: 10px;
+        margin: 10px;
+    }
+

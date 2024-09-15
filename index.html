@@ -16,8 +16,30 @@
         <nav>
             <a href="https://www.getcss.org">Home</a>
         </nav>
-        <main class="fx-perfect-center p-20-px">
-            <div>
+        <main class="fx-perfect-center p-t-20-pr">
+            <div class="bmibox">
+                <div class="row fx-row">
+                    <div class="p-10-px">
+                        <p><b>Check your BMI:</b></p>
+                        <form action="#" class="m-10-px">
+                            <label for="height">Height (cm):</label><br>
+                            <input type="text" id="height" name="height" size="10"><br>
+                            <label for="weight">Weight (kg):</label><br>
+                            <input type="text" id="weight" name="weight" size="10"><br><br>
+                            <input type="submit" value="Calculate">
+                            <input type="reset" value="Reset">
+                          </form>
+                    </div> 
+                    <div class="resultbox">
+                        <ul>
+                            <li id="obesity">Obesity</li>
+                            <li id="overweight">Overweight</li>
+                            <li id="optimum">Optimum</li>
+                            <li id="underweight">Underweight</li>
+                        </ul>
+                    </div>
+                </div>
+
                 
             </div>
         </main>

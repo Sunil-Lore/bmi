@@ -3,7 +3,8 @@
     --secondary-color: #004080;
     --light-color:#e6e6e6;
     --dark-color:#262626;
-    --differentweight-color: yellow;
-    --optimumrange-color: green;
+    --underweight-color: yellow;
+    --overweight-color: yellow;
+    --optimum-color: green;
     --obesity-color: maroon;
 }
