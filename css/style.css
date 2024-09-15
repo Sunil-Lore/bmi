@@ -85,7 +85,7 @@
     }
     #resultarea {
         padding:10px;
-        display:block;
+        display:none;
     }
     input[type="text"] {
         padding: 4px 7px;

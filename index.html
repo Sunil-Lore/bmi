@@ -31,7 +31,7 @@
                           </form>
                     </div> 
                     <div class="col-md-6 resultbox p-10-px">
-                        <p id="resultarea" class="txt-center">Result area</p>
+                        <p id="resultarea" class="txt-center"></p>
                     </div>
                 </div>
 
@@ -54,26 +54,25 @@
             let weight = weightInput.value;
             let bmi = weight/(heightInM*heightInM);
             if(bmi<18.5){
-
+                    $("#resultarea").fadeIn(3000);
                     $("#resultarea").css("background-color","yellow");
                     $("#resultarea").text("Underweight");
             } else if(bmi<24.9){
-
+                    $("#resultarea").fadeIn(3000);
                     $("#resultarea").css("background-color","green");
                     $("#resultarea").text("Optimum");
             } else if(bmi<29.9){
-
+                    $("#resultarea").fadeIn(3000);
                     $("#resultarea").css("background-color","yellow");
                     $("#resultarea").text("Overweight");
             } else{
-
+                    $("#resultarea").fadeIn(3000);
                     $("#resultarea").css("background-color","maroon");
                     $("#resultarea").text("Obesity");
             }
         }
         function referesh(){
-            $("#resultarea").css("background-color","#e6e6e6");
-            $("#resultarea").text("Result area");
+            $("#resultarea").css("background-color", "silver").fadeOut(2000);
         }
     </script>
 </body>
