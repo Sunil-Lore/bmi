@@ -29,15 +29,15 @@
                             <label for="weight">Weight (kg):</label><br>
                             <input type="text" id="weight" name="weight" size="10"><br /><br />
                             <input type="submit" value="Calculate" onclick="calculate()">
-                            <input type="reset" value="Reset">
+                            <input type="reset" value="Reset" onclick="referesh()" >
                           </form>
                     </div> 
                     <div class="col-md-6 resultbox">
                         <ul>
-                            <li id="obesity">Obesity</li>
-                            <li id="overweight">Overweight</li>
-                            <li id="optimum">Optimum</li>
-                            <li id="underweight">Underweight</li>
+                            <li id="obesity"></li>
+                            <li id="overweight"></li>
+                            <li id="optimum"></li>
+                            <li id="underweight"></li>
                         </ul>
                     </div>
                 </div>
@@ -63,21 +63,25 @@
             if(bmi<18.5){
                 $(function(){
                     $("#underweight").css("opacity","1");
+                    $("#underweight").text("Underweight");
                 });
 
             } else if(bmi<24.9){
                 $(function(){
                     $("#optimum").css("opacity","1");
+                    $("#optimum").text("Optimum");
             });
                 
             } else if(bmi<29.9){
                 $(function(){
                     $("#overweight").css("opacity","1");
+                    $("#overweight").text("Overweight");
             });
                
             } else{
                 $(function(){
                     $("#obesity").css("opacity","1");
+                    $("#obesity").text("Obesity");
             });
                 
             }
