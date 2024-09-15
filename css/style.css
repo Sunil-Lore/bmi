@@ -83,6 +83,10 @@
         border-radius: 10px;
         margin: 5px;
     }
+    #resultarea {
+        padding:10px;
+        display:block;
+    }
     input[type="text"] {
         padding: 4px 7px;
         border: 1px solid var(--dark-color);

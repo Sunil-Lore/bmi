@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Sunil-Lore/getcss-lite@getcss-light-0.1.0-alpha-02/dist/css/getcss-lite.min.css" /> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/color.css" />
@@ -23,22 +21,17 @@
                     <div class="col-md-6 p-2-px">
                         <p class="txt-center"><b>Check your BMI:</b></p>
                         <br />
-                        <form action="#" class="m-2-px txt-center">
+                        <form action="#" class="m-2-px txt-center" onsubmit="calculate(); return false;">
                             <label for="height">Height (cm):</label><br />
                             <input type="text" id="height" name="height" size="10"><br /><br />
                             <label for="weight">Weight (kg):</label><br>
                             <input type="text" id="weight" name="weight" size="10"><br /><br />
-                            <input type="submit" value="Calculate" onclick="calculate()">
+                            <input type="submit" value="Calculate">
                             <input type="reset" value="Reset" onclick="referesh()" >
                           </form>
                     </div> 
-                    <div class="col-md-6 resultbox">
-                        <ul>
-                            <li id="obesity"></li>
-                            <li id="overweight"></li>
-                            <li id="optimum"></li>
-                            <li id="underweight"></li>
-                        </ul>
+                    <div class="col-md-6 resultbox p-10-px">
+                        <p id="resultarea" class="txt-center">Result area</p>
                     </div>
                 </div>
 
@@ -61,30 +54,26 @@
             let weight = weightInput.value;
             let bmi = weight/(heightInM*heightInM);
             if(bmi<18.5){
-                $(function(){
-                    $("#underweight").css("opacity","1");
-                    $("#underweight").text("Underweight");
-                });
 
+                    $("#resultarea").css("background-color","yellow");
+                    $("#resultarea").text("Underweight");
             } else if(bmi<24.9){
-                $(function(){
-                    $("#optimum").css("opacity","1");
-                    $("#optimum").text("Optimum");
-            });
-                
+
+                    $("#resultarea").css("background-color","green");
+                    $("#resultarea").text("Optimum");
             } else if(bmi<29.9){
-                $(function(){
-                    $("#overweight").css("opacity","1");
-                    $("#overweight").text("Overweight");
-            });
-               
+
+                    $("#resultarea").css("background-color","yellow");
+                    $("#resultarea").text("Overweight");
             } else{
-                $(function(){
-                    $("#obesity").css("opacity","1");
-                    $("#obesity").text("Obesity");
-            });
-                
+
+                    $("#resultarea").css("background-color","maroon");
+                    $("#resultarea").text("Obesity");
             }
+        }
+        function referesh(){
+            $("#resultarea").css("background-color","#e6e6e6");
+            $("#resultarea").text("Result area");
         }
     </script>
 </body>
